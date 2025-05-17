@@ -49,6 +49,7 @@
   ],
   "dependencies": {
     "@tabler/icons-vue": "^3.31.0",
-    "@tailwindcss/vite": "^4.1.4"
+    "@tailwindcss/vite": "^4.1.4",
+    "vite-plugin-css-injected-by-js": "^3.5.2"
   }
 }
