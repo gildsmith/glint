@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import "tailwindcss";
+
+/*
+ | THEME SETTINGS
+ */
+@theme {
+    --font-sans: 'Instrument Sans', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+}
+
+/*
+ | INPUT UTILITIES
+ */
+@utility input-spacing {
+    @apply px-3 py-0.75;
+}
+
+@utility input-base {
+    @apply text-slate-900 bg-white border border-transparent rounded-md shadow-none;
+    @apply disabled:opacity-30 disabled:grayscale;
+    @apply focus:outline-none;
+}
+
+@utility input-focus {
+    @apply ring-2 ring-offset-2;
+}
+
+@utility input-high {
+    @apply text-white bg-slate-900 border-slate-900 shadow-xs;
+    @apply hover:border-slate-800;
+}
+
+@utility input-normal {
+    @apply text-slate-900 bg-white border-slate-300 shadow-xs;
+    @apply hover:border-slate-400;
+}
+
+@utility input-low {
+    @apply text-slate-900 bg-transparent border-transparent shadow-none;
+    @apply hover:border-slate-300;
+}
+
+@utility input-danger-high {
+    @apply text-white bg-slate-900 border-slate-900 shadow-xs;
+    @apply hover:border-slate-800;
+}
+
+@utility input-danger-normal {
+    @apply text-slate-900 bg-white border-slate-300 shadow-xs;
+    @apply hover:border-slate-400;
+}
+
+@utility input-danger-low {
+    @apply text-slate-900 bg-transparent border-transparent shadow-none;
+    @apply hover:border-slate-300;
+}
