@@ -1,6 +1,10 @@
 <script lang="ts" setup>
+import {computed, useAttrs} from "vue";
 
 defineOptions({name: 'Input'})
+
+const model = defineModel()
+const attrs = useAttrs()
 
 interface PropsInterface {
     before?: string
@@ -13,18 +17,18 @@ const props = withDefaults(
         after: undefined
     }
 )
+
+const isDisabled = computed(() => Boolean(attrs.disabled))
 </script>
 
 <template>
-    <div class="container">
+    <div class="container" :data-disabled="isDisabled || null">
         <template v-if="$slots.before || props.before">
             <div class="before">
                 <slot name="before">{{ props.before }}</slot>
             </div>
         </template>
-
-        <input class="input" type="text" v-bind="$attrs" />
-
+        <input v-model="model" class="input" type="text" v-bind="attrs"/>
         <template v-if="$slots.after || props.after">
             <div class="after">
                 <slot name="after">{{ props.after }}</slot>
@@ -40,6 +44,10 @@ const props = withDefaults(
     @apply focus-within:input-focus;
     @apply input-base input-normal overflow-hidden max-w-full;
     @apply flex divide-x divide-inherit;
+}
+
+.container[data-disabled] {
+    @apply input-disabled;
 }
 
 .before,

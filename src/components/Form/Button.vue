@@ -8,7 +8,7 @@ interface PropsInterface {
     danger?: boolean,
 }
 
-const props = withDefaults(
+withDefaults(
     defineProps<PropsInterface>(), {
         variant: 'secondary',
         label: 'Button',
@@ -18,9 +18,9 @@ const props = withDefaults(
 </script>
 
 <template>
-    <button :class="['button', props.variant, { danger: props.danger }]">
+    <button :class="['button', variant, { danger: danger }]">
         <span class="wrapper">
-            <slot>{{ props.label }}</slot>
+            <slot>{{ label }}</slot>
         </span>
     </button>
 </template>
@@ -38,6 +38,7 @@ const props = withDefaults(
     @apply input-base cursor-pointer;
     @apply active:shadow-none active:inset-shadow-2xs;
     @apply focus-visible:input-focus;
+    @apply disabled:input-disabled;
 }
 
 .primary {

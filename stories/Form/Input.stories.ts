@@ -8,12 +8,14 @@ export default {
         before: { control: 'text' },
         after: { control: 'text' },
         disabled: { type: 'boolean' },
+        type: {type: 'string'},
     },
     args: {
         before: 'https://',
         after: '@gmail.com',
         disabled: false,
         onClick: fn(),
+        value: 'Example Value',
     },
 };
 

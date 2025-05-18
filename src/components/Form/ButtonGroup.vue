@@ -1,8 +1,8 @@
 <script lang="ts" setup>
+import Button from "./Button.vue";
 
 defineOptions({name: 'ButtonGroup'})
 
-import Button from "./Button.vue";
 </script>
 
 <template>
