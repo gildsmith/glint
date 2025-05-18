@@ -1,0 +1,1 @@
+import{j as o}from"./index-ZxZUOSz9.js";import{useMDXComponents as r}from"./index-FYf34qIO.js";function e(n){const t={p:"p",...r(),...n.components};return o.jsx(t.p,{children:"Hello World!"})}function m(n={}){const{wrapper:t}={...r(),...n.components};return t?o.jsx(t,{...n,children:o.jsx(e,{...n})}):e(n)}export{m as default};
